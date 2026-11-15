@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cyber News Dashboard — Wajahat Irfan</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>Cyber News Dashboard</h1>
+      <p class="subtitle">Curated cybersecurity topics and practical safety tips — educational content only, no live news feed.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="filters" aria-label="Filter by topic">
+      <p>Filter by topic:</p>
+      <div class="filter-buttons" id="filterButtons">
+        <button type="button" class="filter-btn active" data-topic="all">All</button>
+        <button type="button" class="filter-btn" data-topic="phishing">Phishing</button>
+        <button type="button" class="filter-btn" data-topic="passwords">Passwords</button>
+        <button type="button" class="filter-btn" data-topic="2fa">Two-Factor Auth</button>
+        <button type="button" class="filter-btn" data-topic="updates">Software Updates</button>
+        <button type="button" class="filter-btn" data-topic="wifi">Public Wi-Fi</button>
+      </div>
+    </section>
+
+    <section class="card-grid" id="cardGrid">
+      <article class="card" data-topic="phishing">
+        <h2>Spot a phishing email</h2>
+        <p class="card-topic">Phishing</p>
+        <p>Phishing messages pretend to be from a bank, a delivery service, or a colleague, and try to rush you into clicking a link or sharing a password.</p>
+        <ul>
+          <li>Check the sender's full email address, not just the display name.</li>
+          <li>Hover over links before clicking — look for misspelt domains.</li>
+          <li>Never send passwords or one-time codes by email.</li>
+          <li>When in doubt, open the service's app or website yourself instead of following the link.</li>
+        </ul>
+      </article>
+
+      <article class="card" data-topic="passwords">
+        <h2>Strong passwords that you can remember</h2>
+        <p class="card-topic">Passwords</p>
+        <p>A long password beats a short complicated one. Use a different password for every important account.</p>
+        <ul>
+          <li>Use at least 12 characters — a short phrase works well.</li>
+          <li>Never reuse your email or banking password anywhere else.</li>
+          <li>Use a password manager instead of writing passwords on paper.</li>
+          <li>Change a password immediately if a service tells you it was leaked.</li>
+        </ul>
+      </article>
+
+      <article class="card" data-topic="2fa">
+        <h2>Turn on two-factor authentication (2FA)</h2>
+        <p class="card-topic">Two-Factor Auth</p>
+        <p>2FA adds a second check — usually a code from an app or a text message — so a stolen password alone is not enough to get in.</p>
+        <ul>
+          <li>Enable 2FA on email, banking, and social accounts first.</li>
+          <li>Prefer an authenticator app over SMS codes when you can.</li>
+          <li>Save your backup codes somewhere safe, offline.</li>
+          <li>Never share a 2FA code with anyone, even if they claim to be support.</li>
+        </ul>
+      </article>
+
+      <article class="card" data-topic="updates">
+        <h2>Keep software updated</h2>
+        <p class="card-topic">Software Updates</p>
+        <p>Updates often fix security holes. An unpatched phone, browser, or app is one of the easiest targets.</p>
+        <ul>
+          <li>Turn on automatic updates for your operating system and browser.</li>
+          <li>Update apps you actually use; remove ones you don't.</li>
+          <li>Restart your device when an update asks for it.</li>
+          <li>Only download software from the official store or the developer's own site.</li>
+        </ul>
+      </article>
+
+      <article class="card" data-topic="wifi">
+        <h2>Stay safe on public Wi-Fi</h2>
+        <p class="card-topic">Public Wi-Fi</p>
+        <p>Free Wi-Fi in cafés, airports, and hotels can be monitored by others on the same network.</p>
+        <ul>
+          <li>Avoid logging in to banking or email on open Wi-Fi if you can wait.</li>
+          <li>Use your mobile data or a trusted VPN for sensitive tasks.</li>
+          <li>Make sure the sites you visit use HTTPS (the lock icon).</li>
+          <li>Turn off auto-connect to open networks and forget networks you no longer use.</li>
+        </ul>
+      </article>
+
+      <article class="card" data-topic="phishing">
+        <h2>Phishing by text message and call</h2>
+        <p class="card-topic">Phishing</p>
+        <p>Scammers also use SMS ("your parcel is held") and phone calls ("your account will be closed") to create urgency.</p>
+        <ul>
+          <li>Don't click links in unexpected texts — check the delivery in the official app.</li>
+          <li>Banks never ask for your full password or PIN on a call.</li>
+          <li>Hang up and call the organisation back on its published number.</li>
+          <li>Report scam messages to your mobile carrier if it offers a reporting option.</li>
+        </ul>
+      </article>
+    </section>
+
+    <p id="noResults" class="empty" hidden>No topics match this filter.</p>
+    <p class="disclaimer">Educational content written for this student project. It is general safety guidance, not professional security advice, and it is not a live news feed.</p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Wajahat Irfan — student project.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
